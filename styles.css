@@ -7,6 +7,7 @@
 }
 
 body {
+    overflow-x: hidden;
     background-color: rgb(17, 24, 39);
 }
 
@@ -27,7 +28,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
     max-width: 100%;
     width: 100%;
@@ -42,7 +43,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    padding: 0 3rem;
 }
 
 .comments {
@@ -59,18 +60,18 @@ section {
 .com1, .com2, .com3 {
     display: flex;
     flex-direction: column;
-}
-
-.com1, .com2 {
+    align-items: center;
+    line-height: 24px;
 }
 
 .box {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     padding: 32px;
     border-radius: .75rem;
     border: 1px solid rgb(55, 65, 81);
-    max-width: 100%;
+    width: 510px;
     background-color: rgb(31, 42, 56);
 }
 
@@ -87,6 +88,14 @@ section {
 .box p {
     margin-bottom: 20px;
     font-size: 16px;
+}
+
+.span {
+    margin-bottom: 5rem;
+}
+
+.com1 .profile, .com2 .profile {
+    margin-bottom: 50px;
 }
 
 .profile {
@@ -111,3 +120,90 @@ section {
     color: rgb(156, 163, 175);
 }
 
+@media screen and (max-width: 1295px) {
+    section {
+        padding: 0;
+    }
+
+    .comment1, .comment2, .comment3 {
+        gap: 6.125rem;
+    }
+
+    .box, .box p {
+        max-width: 510px;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1268px) {
+    section {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 1227px) {
+    section {
+        padding: 0 3.05rem;
+    }
+}
+
+@media screen and (max-width: 1174px) {
+    section {
+        padding: 0 3.05rem;
+    }
+}
+
+@media screen and (max-width: 1148px) {
+    section {
+        padding: 0 3.05rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 0px;
+    }
+
+    .content{
+        padding: 1.6rem 1.05rem;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    section {
+        padding: 0;
+    }
+
+    .comment1, .comment2, .comment3 {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    .com1, .com2, .com3 {
+        margin: 0 2rem;
+    }
+
+    .com3 .profile {
+        margin-bottom: 50px;
+    }
+
+    #profile {
+        margin-bottom: 25px;
+    }
+
+    .box {
+        max-width: 100%;
+    }
+}
